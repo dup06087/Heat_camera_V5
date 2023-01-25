@@ -24,7 +24,7 @@ Cam_names = lines
 
 ### logo
 ## inital
-init_Logo_Location = "./0.jpg"
+init_Logo_Location = "./Page_Image.jpg"
 
 ## changable
 url_path = "./URL.txt"

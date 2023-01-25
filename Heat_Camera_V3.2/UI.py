@@ -242,7 +242,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "전력제어반 이상 모니터링 시스템"))
-        MainWindow.setWindowIcon(QtGui.QIcon("./0.jpg"))
+        MainWindow.setWindowIcon(QtGui.QIcon("Window_Icon.png"))
         for i in range(camera_num):
             self.lbl_CAM_Num[i].setText(_translate("MainWindow", "CAM{num}".format(num = i + 1)))
             self.lbl_prob_chk[i].setText(_translate("MainWindow", "문제 발생"))
