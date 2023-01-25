@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from get_cam_num import camera_num
-import New_server
+from Cam_number import camera_num
+import Server
 import initial_data
 
 class Ui_MainWindow(object):
@@ -121,7 +121,7 @@ class Ui_MainWindow(object):
             #canvas
             self.chart.append(QtWidgets.QVBoxLayout())
             try:
-                self.chart[i].addWidget(New_server.canvas[i])
+                self.chart[i].addWidget(Server.canvas[i])
                 # self.chart[i].addWidget(.canvas[i])
                 self.chart[i].setSpacing(0)
                 self.chart[i].setContentsMargins(0,0,0,0)
@@ -306,7 +306,7 @@ class AnotherWindow(QtWidgets.QWidget):
         ###cam label end
         self.chart1_2 = QtWidgets.QVBoxLayout()
         self.chart1_2.setObjectName("chart1_2")
-        self.chart1_2.addWidget(New_server.child_canvas[ui.clicked_num])
+        self.chart1_2.addWidget(Server.child_canvas[ui.clicked_num])
         # self.chart1_2.addWidget(main_threadings.child_canvas)
         self.CAM1_LHP_2.addLayout(self.chart1_2)
         self.CAM1_Layout_2.addLayout(self.CAM1_LHP_2)

@@ -14,7 +14,7 @@ import socket
 import sys
 
 import matplotlib.pyplot as plt
-from get_cam_num import camera_num
+from Cam_number import camera_num
 # from IPython import get_ipython
 # get_ipython().run_line_magic('matplotlib', 'qt')
 # camera_num = 4

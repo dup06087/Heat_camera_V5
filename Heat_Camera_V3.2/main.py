@@ -1,8 +1,8 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-import child_window_saved
+import UI
 from PyQt5.QtCore import *
-from get_cam_num import camera_num
+from Cam_number import camera_num
 
 ### 장비가져오기 쓰레드 실행
 thread_get_data = QThread()
@@ -13,10 +13,10 @@ class Worker_get_data(QObject):
 
     def get_temperature(self):   ### 반드시 str값!!!
         while True:
-            aux = child_window_saved.New_server.aux
+            aux = UI.Server.aux
             try:
                 for i in range(camera_num):
-                    child_window_saved.ui.status_label[i].setText('\n'.join(("Ch{} : ".format(k) + str(aux[i][k])) for k in range(len(aux[i]))))
+                    UI.ui.status_label[i].setText('\n'.join(("Ch{} : ".format(k) + str(aux[i][k])) for k in range(len(aux[i]))))
                         # print("Not showing subwindow")
                     QtWidgets.QApplication.processEvents()  ### 중요
 
@@ -26,8 +26,8 @@ class Worker_get_data(QObject):
 
             try:
                 for k in range(len(aux[0])):
-                    child_window_saved.MainWindow.ui.status_label.setText(
-                        '\n'.join(("Ch{} : ".format(k) + str(aux[child_window_saved.ui.clicked_num][k])) for k in range(len(aux[child_window_saved.ui.clicked_num]))))
+                    UI.MainWindow.ui.status_label.setText(
+                        '\n'.join(("Ch{} : ".format(k) + str(aux[UI.ui.clicked_num][k])) for k in range(len(aux[UI.ui.clicked_num]))))
                     QtWidgets.QApplication.processEvents()  ### 중요
 
             except:

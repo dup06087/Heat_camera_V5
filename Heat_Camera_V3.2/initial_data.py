@@ -1,4 +1,4 @@
-from get_cam_num import camera_num
+from Cam_number import camera_num
 
 ### initial values
 init_custom_cam_name = ["cam{}".format(i+1) for i in range(camera_num)]
