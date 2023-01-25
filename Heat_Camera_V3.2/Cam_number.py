@@ -1,1 +1,1 @@
-camera_num = 16
+camera_num = 4
