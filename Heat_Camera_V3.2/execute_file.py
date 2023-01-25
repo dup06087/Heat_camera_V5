@@ -4,8 +4,6 @@ import child_window_saved
 from PyQt5.QtCore import *
 from get_cam_num import camera_num
 
-
-
 ### 장비가져오기 쓰레드 실행
 thread_get_data = QThread()
 class Worker_get_data(QObject):
@@ -21,19 +19,6 @@ class Worker_get_data(QObject):
                     child_window_saved.ui.status_label[i].setText('\n'.join(("Ch{} : ".format(k) + str(aux[i][k])) for k in range(len(aux[i]))))
                         # print("Not showing subwindow")
                     QtWidgets.QApplication.processEvents()  ### 중요
-
-                    # if (int(Get_Equipment_status.temp_outputs[i]) >= 25) and (int(Get_Equipment_status.volt1_outputs[i]) >= 25) and (int(Get_Equipment_status.volt2_outputs[i]) >= 25) and (int(Get_Equipment_status.volt3_outputs[i]) >= 25) and (int(Get_Equipment_status.current_outputs[i]) >= 25):
-                    #     child_window_saved.ui.lbl_prob_chk[i].setStyleSheet("background-color: rgb(255, 0, 0);")
-                    #     try:
-                    #         child_window_saved.MainWindow.ui.lbl_prob_chk[i].setStyleSheet("background-color: rgb(255, 0, 0);")
-                    #     except:
-                    #         pass
-                    # else:
-                    #     child_window_saved.ui.lbl_prob_chk[i].setStyleSheet("background-color: rgb(255, 255, 255);")
-                    #     try:
-                    #         child_window_saved.MainWindow.ui.lbl_prob_chk[i].setStyleSheet("background-color: rgb(255, 255, 255);")
-                    #     except:
-                    #         pass
 
             except:
                 # print("UI loading...")
