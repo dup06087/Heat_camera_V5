@@ -4,16 +4,7 @@ import child_window_saved
 from PyQt5.QtCore import *
 from get_cam_num import camera_num
 
-# for i in range(child_window_saved.New_server.aux):
-#     print(child_window_saved.New_server.aux[i])
 
-### Qt 실행
-# app = QtWidgets.QApplication(sys.argv)
-# MainWindow = QtWidgets.QMainWindow()
-# ui = prac_scroll.Ui_MainWindow()
-# ui = prac_childwindow.Ui_MainWindow()
-# ui.setupUi(MainWindow)
-# MainWindow.show()
 
 ### 장비가져오기 쓰레드 실행
 thread_get_data = QThread()
