@@ -8,9 +8,6 @@ from Cam_number import camera_num
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        # MainWindow.resize(1035, 758)
-        # MainWindow.setWindowState(QtCore.Qt.WindowMaximized)
-        # MainWindow.setWindowFlags((QtCore.Qt.Window | QtCore.Qt.FramelessWindowHint))
 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -159,14 +156,6 @@ class Ui_MainWindow(object):
             self.status_label.append(initial_value) ### 동적으로 초기화가 안 됨
 
 
-            # result = None
-            # while result is None:  ###종속성
-            #     try:
-            #         result = Get_Equipment_status.values[i]
-            #         self.status_label.append(QtWidgets.QLabel(result)) ### 이것이 실행 될 때 이미 값이들어와야함
-            #     except:
-            #         pass
-
             font_status = QtGui.QFont()
             font_status.setPointSize(15)
             self.status_label[i].setFont(font_status)
@@ -266,14 +255,8 @@ class Ui_MainWindow(object):
         self.Form.show()
 
 class AnotherWindow(QtWidgets.QWidget):
-    """
-    This "window" is a QWidget. If it has no parent, it
-    will appear as a free-floating window as we want.
-    """
     def __init__(self):
-        # print("get num = ", ui.clicked_num)
         super().__init__()
-        # layout = QtWidgets.QVBoxLayout()
 
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")

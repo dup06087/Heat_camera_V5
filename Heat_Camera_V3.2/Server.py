@@ -178,11 +178,8 @@ class Worker2(QObject):
         # print("initialiezed")
 
     def display_plot(self):
-        # print("come in worker2 display_plot")
         while True:
-            # print("worker2 outer while")
             try:
-                # print("worker2 try inner while")
                 for i in range(camera_num):
                     self.temperature_upscale = cv2.resize(temperature[i], None, fx=8, fy=8,
                                                           interpolation=cv2.INTER_CUBIC)
@@ -196,7 +193,7 @@ class Worker2(QObject):
 
                     canvas[i].draw()
 
-                    ###child
+                    ###child ###여기 지우자
                     child_chart[i].clear()
 
                     child_chart[i].get_xaxis().set_visible(False)
