@@ -216,7 +216,6 @@ class Worker2(QObject):
 
 
             except:
-                # print("drawing fail : ", self.cam_num)
                 pass
             time.sleep(0.1875)
 
@@ -227,9 +226,3 @@ thread_draw_chart.started.connect(worker_draw_canvas.display_plot)
 
 thread.start()
 thread_draw_chart.start()
-
-# window.show()
-
-# app.exec_()
-
-# ClientSocket.close()

@@ -5,7 +5,6 @@ init_custom_cam_name = ["cam{}".format(i+1) for i in range(camera_num)]
 print(init_custom_cam_name)
 
 ###changable values
-
 file_path = "./cam_names.txt"
 with open(file_path) as f:
     lines = f.read().splitlines()
@@ -34,5 +33,3 @@ with open(url_path) as f:
         init_Logo_Location = line
         # print(line)
         f.close()
-
-# print("logo : ", init_Logo_Location)
