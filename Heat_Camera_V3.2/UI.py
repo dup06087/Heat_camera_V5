@@ -1,8 +1,9 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from Cam_number import camera_num
 import Server
 import initial_data
+from Cam_number import camera_num
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):

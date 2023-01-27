@@ -5,19 +5,15 @@ Created on Fri Nov 26 18:07:59 2021
 @author: USER
 """
 
-import time
-import math
-import numpy as np
-import pickle
-import cv2
 import socket
-import sys
+import time
 
+import cv2
 import matplotlib.pyplot as plt
+import numpy as np
+
 from Cam_number import camera_num
-# from IPython import get_ipython
-# get_ipython().run_line_magic('matplotlib', 'qt')
-# camera_num = 4
+
 plt.ion()
 
 buf_socket_rx = []
@@ -40,14 +36,9 @@ temperature = np.zeros([camera_num, 24, 32])
 # heatmap = np.zeros([24*8,32*8,3])
 aux = np.zeros([camera_num, 16])
 
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from matplotlib.backends.backend_qt5agg import FigureCanvas as FigureCanvas
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
-
-# app = QApplication([])
 
 thread = QThread()
 

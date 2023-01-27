@@ -1,7 +1,7 @@
-import sys
-from PyQt5 import QtCore, QtGui, QtWidgets
-import UI
+from PyQt5 import QtWidgets
 from PyQt5.QtCore import *
+
+import UI
 from Cam_number import camera_num
 
 ### 장비가져오기 쓰레드 실행
